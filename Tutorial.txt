@@ -1,0 +1,85 @@
+Explicacao
+
+O jogo implementado em Haskell foi o Tetris. 
+Utilizou Gtk2Hs, usando as ligacoes da bibliotecas 
+graficas vetoriais do Cairo.
+
+Para contruir o tetris foi necessario usar o compilador GHC.
+É necessario ter as bibliotecas
+  - Graphics.UI.Gtk
+      também conhecido como Gtk2Hs. Eu testei contra v0.10.1
+ 
+  - Graphics.Rendering.Cairo
+      parte do Gtk2Hs, mas às vezes distribuído separadamente
+      Se construir com Gtk2Hs, certifique-se de que as ligações do Cairo 
+      também sejam construídas!
+ 
+  - Control.Concurrent
+      MVAR é para manter o estado do jogo. Esta sendo usado para implementar 
+      uma sincronizacao entre os jogos dos jogadores, permitindo uma comunicacao 
+      unidirecional entre os jogadores, fazendo assim com que os blocos sejam jogadores
+      para os jogadores ao mesmo tempo
+
+Depois de ter estes, basta digitar "make".
+ Mas ocorreu algo que ele nao esta rodando. Era para estar.
+
+ CONTROLES
+ 
+As seguintes chaves são definidas:
+ 
+  - Alt-q / Ctrl-q / botão "Quit"
+      Saia do jogo
+  - Ctrl-p
+      Pause o jogo
+  - Ctrl-s
+      Ativar / desativar sombras (hack para trapacear)
+  - Ctrl-1
+      Comece um novo jogo para 1 jogador
+  - Ctrl-2
+      Comece o novo jogo de 2 jogadores
+ 
+Controles do Jogador 1:
+  - a - mover para a esquerda
+  - d - mover para a direita
+  - s - descer
+  - q - queda instantânea (difícil)
+  - e - girar no sentido horário
+  - w - girar no sentido anti-horário
+  - f - trocar o próximo brick do oponente (apenas 2 jogadores)
+ 
+Player 2 controles:
+  - p - mover para a esquerda
+  - ] - mover para a direita
+  - [ - descer
+  - - - queda instantânea (difícil)
+  - = - girar no sentido horário
+  - 0 - girar no sentido anti-horário
+  - o - próximo bloco do adversário (apenas 2 jogadores)
+ 
+CÓDIGO
+ 
+O código para Tetris é dividido em três partes: TetrisPieces,
+TetrisDrawing e o módulo principal.
+ 
+TetrisPieces contém apenas código puro que define os tipos de dados do jogo,
+peça e o estado transformado. É aqui que o específico do jogo (não-UI) roda.
+ 
+TetrisDrawing contém todo o código relacionado ao Cairo. É aqui que o
+redefinição de chamadas de retorno de tela e funções de desenho de bloco, peça e bloco
+de live. Basicamente, tudo no Monad Render mora aqui.
+ 
+Main contém código impuro (IO Monad) para lidar com o usuário
+interface, incluindo a criação de janelas, manipulação de eventos, atualização
+estado mutável, etc.
+ 
+Em princípio, esta separação deve tornar relativamente fácil extrair o
+todo front end (Gtk2Hs + Cairo) fora do back-end e construir um novo
+com outro kit de ferramentas ou para trocar o Cairo por OpenGL.
+ 
+Os únicos defeitos específicos das extremidades frontais em TetrisPieces são os
+Dados "HandlerId", "DrawingArea" e "Label" no TetrisGameState.
+
+UI
+ 
+Sim, não é bonito. Eu me preocupei mais com a implementação de extensões
+ para as regras do Tetris do que para fazer uma interface bonita.
