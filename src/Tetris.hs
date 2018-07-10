@@ -189,7 +189,7 @@ data TetrisMove = TetrisStepped -- ^ Piso.
    deriving(Eq, Show)
 -- O estado do jogo atual (dividiu o tabuleiro e a figura)
 -- para que quando o voo da figura nao pisque toda a prancha
--- tambem que seja mais otimizado otimizado)
+-- tambem que seja mais otimizado)
 -- [Figure] - lita infinita de figuras no estado atual, 
 -- pegamos o primeiro elemento da lista.
 -- contagem de tempo de velocidade da placa de 
@@ -200,7 +200,7 @@ type Gamestate = (Board,  [Figure], (Speed, Time), Score,TetrisType,TetrisMove,T
 
 -- Estado do jogo
 data GameState = GameState
- {  board   :: Board            -- ^ 
+ {  board   :: Board            -- ^ prancha do jogo
   , figure :: [Figure]            -- ^ lista de figuras
   , speedandtime   :: (Speed, Time) -- ^ tempo e velocidade
   , score   :: Score            -- ^ Conta
@@ -761,7 +761,6 @@ row b n = (filter (\b1 -> n == y b1) b)
 isFullRow :: [Coord] -> Bool
 isFullRow r = (length r) >= 10
 
------- PAREI AQUI
 
 
 -- Pressionando a tecla 'para baixo, a forma cai
@@ -846,7 +845,7 @@ drawBlockCircle  (b,c,d)
   w = fromIntegral 0
   h = fromIntegral 0
 
--- | Quadro Fuchsin para  blocos
+-- | Quadro  para  blocos
 magframe :: Int -> Int -> [Picture]
 magframe b c = 
   [ color magenta  (polygon [ (fromIntegral b,        fromIntegral (-c))
