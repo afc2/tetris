@@ -1,5 +1,9 @@
 Para rodar o jogo
 
-stack setup
-stack build
-stack exec my-project
+* Tem que estar na pasta tetris
+
+* stack setup / 
+* stack build / 
+* stack exec my-project
+
+
