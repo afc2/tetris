@@ -1117,8 +1117,8 @@ updateBoard (Figure sha dir u) a = a ++ vectolist (figureToDraw (Figure sha dir 
 
 
 -- Atualizando o Tetris
--- com cada quadro move a figura para baixo e, enquanto aqui,
--- verifica se a figura do limite inferior alcancou
+-- cada quadro move a figura para baixo e, enquanto aqui,
+-- verifica se a figura do limite inferior  ja foi alcancada
 updateTetris :: Float -> GameState -> GameState
 updateTetris dt u |(typemoving u) == TetrisStepped = updateTetrisStepped dt u 
              |otherwise = updateTetrisSmooth dt u
@@ -1154,12 +1154,12 @@ genNewUniverse u fl = u{ board   = genEmptyBoard
 -- ===========================================
 
 
--- Novo contato - tato  
+-- Nova tatica
 newTact::GameState -> Float -> Float -> GameState
 newTact u  dt tact |(typemoving u) == TetrisStepped = newTactStepped u dt tact
           |otherwise = newTactSmooth u dt tact
 
--- definindo a hora para 0
+-- definindo o tempo para 0
 chZ :: (Speed,Time)    ->(Speed,Time)  
 chZ (sp,_) = (sp,0) 
 
@@ -1239,9 +1239,9 @@ newLevel u | l5 = u{speedandtime = ((signum(extrSpeed (speedandtime u )))*0.1 ,(
 
 
 
--- =========================================
--- Manipulacao
--- =========================================
+-- =====================
+-- Manipulacao das pecas
+-- =====================
 
 -- | Controle do Tetris
 handleTetris :: Event -> GameState -> GameState
