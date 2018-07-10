@@ -1,0 +1,98 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-09 23:41:14.936956 UTC
+
+interface main@main:Main 8002
+  interface hash: a1ac50d7f40fc1286a3763175d39188d
+  ABI hash: faf6df8864ef399529993edbeb4a8b45
+  export-list hash: 23703dcf1858a834093232490a2566a8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: bda74cca9ca3721460b3d791e6f89cc8
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.11@GLUT-2.7.0.11-IP0PzJz4wI8KYXyKTnttpl
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.1.0@OpenGL-3.0.1.0-BckrJgI63aX3I0VRJxU6fY
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bmp-1.2.6.3@bmp-1.2.6.3-43OLkH0uuwm831pBFpx2PZ
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      gloss-1.10.2.5@gloss-1.10.2.5-Cjq2LIsB60XBDXiLGr6ISz
+                      gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1
+                      my-project-0.1@my-project-0.1-3AQJKoNe6s17XdgyWrouvt
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      time-1.6.0.1@time-1.6.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         gloss-rendering-1.10.3.5@gloss-rendering-1.10.3.5-4njwxhM0L51DDTj3f5QCty:Graphics.Gloss.Internals.Data.Picture
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  my-project-0.1@my-project-0.1-3AQJKoNe6s17XdgyWrouvt:Tetris f012cc8e01209708022de39b76980cc2
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+c1f29e1a0a6db938923fbd857c8bbefb
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tetris.run1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e128555ac9bbe49417267a626cb9e64e
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Tetris.run1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
